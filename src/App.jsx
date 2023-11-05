@@ -1,8 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
 import Index from './pages/index'
-import Historial from './pages/historial'
-
+import { Historial } from './pages/historial'
 export default function App() {
   return (
     <>

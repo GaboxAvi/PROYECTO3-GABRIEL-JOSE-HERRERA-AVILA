@@ -43,7 +43,14 @@ div.historial {
     float: right;
     padding: 6px;
     border-radius: 25px;
-    width: 55px;
+    margin-right: 10px;
+    width: auto;
+}
+
+
+
+div.historial span{
+    padding-left: 50px;
 }
 
 div.historial span {

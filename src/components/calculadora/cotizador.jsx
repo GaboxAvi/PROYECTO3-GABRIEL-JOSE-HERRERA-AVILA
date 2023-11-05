@@ -14,7 +14,7 @@ export default function Cotizador({
             const factorPropiedad = propiedadDato.find((item) => item.tipo === propiedad).factor;
             const factorUbicacion = ubicacionDato.find((item) => item.tipo === ubicacion).factor;
             const operacionPoliza = factorPropiedad * factorUbicacion * metros2 * costoM2;
-            const resultadoPoliza = operacionPoliza.toFixed(2);
+            const resultadoPoliza = `$${operacionPoliza.toFixed(2)}`;
             setResultadoPoliza(resultadoPoliza);
             setCotizador(true);
 
@@ -48,14 +48,13 @@ export default function Cotizador({
             <button onClick={cotizadorOperacion}>Cotizar</button>
           </div>
           <div className="center separador">
-            <p className="importe">Precio estimado: $ <span id="valorPoliza">{resultadoPoliza}</span>
-              <span
-                className={`guardar ${cotizador ? "" : "ocultar"}`}
+            <p className="importe">Precio estimado: $ <span id="valorPoliza">{resultadoPoliza}</span></p>
+            <button
+                className={`${cotizador ? "" : "ocultar"} button button-outline`}
                 onClick={guardarCotizacion}
                 title="Guardar en historial">
-                💾
-              </span>
-            </p>
+                Guardar en historial
+              </button>
           </div>
         </>
       );

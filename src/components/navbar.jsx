@@ -5,10 +5,10 @@ export default function Navbar() {
     <nav>
       <div className="historial">
         <Link to="historial">
-          <span title="Ver Historial">📋</span>
+          <button title="Ver Historial">Historial</button>
         </Link>
       </div>
-      <h1 className="center separador">Seguros del hogar 🏡</h1>
+      <h1 className="center separador">¡Seguros para tu hogar!</h1>
     </nav>
   );
 }
