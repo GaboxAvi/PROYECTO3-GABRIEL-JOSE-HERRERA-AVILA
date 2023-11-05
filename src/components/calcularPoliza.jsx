@@ -1,6 +1,8 @@
 import Propiedad from "./calculadora/propiedad";
 import Ubicacion from "./calculadora/ubicacion";
 import MetrosCuadrados from "./calculadora/metrosCuadrados";
+import Cotizador from "./calculadora/cotizador";
+
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -46,6 +48,15 @@ useEffect(() => {
       <Propiedad datos={propiedadDato} setPropiedad={setPropiedad} />
       <Ubicacion datos={ubicacionDato} setUbicacion={setUbicacion} />
       <MetrosCuadrados metros2={metros2} setMetros2={setMetros2} />
+      <Cotizador 
+        propiedad={propiedad}
+        ubicacion={ubicacion}
+        metros2={metros2}
+        propiedadDato={propiedadDato}
+        ubicacionDato={ubicacionDato}
+        costoM2={costoM2}
+        setResultadoPoliza={setResultadoPoliza}
+        resultadoPoliza={resultadoPoliza}/>
     </div>
   );
 }
