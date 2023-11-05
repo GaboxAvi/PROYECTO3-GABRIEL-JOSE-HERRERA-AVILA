@@ -1,4 +1,8 @@
 import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import swal from "sweetalert";
+import Swal from "sweetalert";
 
 
 export default function Cotizador({
@@ -19,6 +23,21 @@ export default function Cotizador({
             setCotizador(true);
 
             console.log(resultadoPoliza);
+
+            swal({
+              title: "Cotización realizada con éxito.",
+              icon: "success",
+              buttons: false,
+              timer: 2000,
+            });
+
+            } else {
+              Swal({
+                title: "Debes completar todos los datos.",
+                icon: "error",
+                buttons: false,
+                timer: 2500,
+              });
             }
     }
 
@@ -39,7 +58,18 @@ export default function Cotizador({
           localStorage.setItem("cotizacion", JSON.stringify(cotizacionesHistorial));
 
           console.log(cotizacionGuardar);
-        }
+
+          toast('¡La cotizacion ha sido guardada!', {
+            position: "top-left",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: false,
+            theme: "light",
+            })
+          }
       };
     
       return (
@@ -55,6 +85,7 @@ export default function Cotizador({
                 title="Guardar en historial">
                 Guardar en historial
               </button>
+              <ToastContainer/>
           </div>
         </>
       );
