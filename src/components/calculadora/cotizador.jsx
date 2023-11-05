@@ -22,7 +22,7 @@ export default function Cotizador({
             }
     }
 
-    const guardar = () => {
+    const guardarCotizacion = () => {
         if (cotizador) {
           const cotizacionGuardar = {
             fecha:
@@ -51,7 +51,7 @@ export default function Cotizador({
             <p className="importe">Precio estimado: $ <span id="valorPoliza">{resultadoPoliza}</span>
               <span
                 className={`guardar ${cotizador ? "" : "ocultar"}`}
-                onClick={guardar}
+                onClick={guardarCotizacion}
                 title="Guardar en historial">
                 💾
               </span>

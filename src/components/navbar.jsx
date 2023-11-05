@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <nav>
       <div className="historial">
-        <a href="../pages/historial">
-          <span title="Ver Historial">📋</span></a>
+        <Link to="historial">
+          <span title="Ver Historial">📋</span>
+        </Link>
       </div>
       <h1 className="center separador">Seguros del hogar 🏡</h1>
     </nav>
