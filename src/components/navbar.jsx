@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav>
+    <nav className="nav-container">
       <div className="historial">
         <Link to="historial">
           <button title="Ver Historial">Historial</button>

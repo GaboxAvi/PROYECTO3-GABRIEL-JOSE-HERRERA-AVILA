@@ -27,9 +27,9 @@ export function Historial() {
 
   return (
     <div>
-      <h1 className="center separador">Ver Historial 📋</h1>
+      <h1 className="center separador">Historial cotizaciones</h1>
       <div className=" center div-cotizador">
-        <table>
+        <table className='center'>
         <thead>
             <tr>
               <th>Fecha de cotización</th>
@@ -37,7 +37,7 @@ export function Historial() {
               <th>Ubicación</th>
               <th>Metros cuadrados</th>
               <th>Póliza mensual</th>
-              <th>Acciones</th>
+              <th>Eliminar</th>
             </tr>
           </thead>
           <tbody>
